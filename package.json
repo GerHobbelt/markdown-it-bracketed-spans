@@ -1,5 +1,6 @@
 {
   "name": "markdown-it-bracketed-spans",
+  "defModuleName": "markdownItBracketedSpans",
   "version": "1.0.1",
   "description": "<span> tag for markdown-it markdown parser.",
   "keywords": [
@@ -18,7 +19,16 @@
   },
   "license": "MIT",
   "main": "index.js",
-  "scripts": {},
-  "devDependencies": {},
+  "scripts": {
+    "browserify": "rimraf dist && mkdirp dist && cross-var browserify ./ -s $npm_package_defModuleName -p [ browserify-wrap --prefix \"/*! $npm_package_name $npm_package_version $npm_package_homepage @license $npm_package_license */\" ] | cross-var ntee -s dist/$npm_package_name.js && cross-var uglifyjs dist/$npm_package_name.js --beautify beautify=false,ascii_only=true,preamble=\"'/*! $npm_package_name $npm_package_version $npm_package_homepage @license $npm_package_license */'\" | cross-var ntee -s dist/$npm_package_name.min.js"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "browserify-wrap": "^1.0.2",
+    "cross-var": "^1.1.0",
+    "ntee": "^1.1.5",
+    "rimraf": "^2.6.3",
+    "uglify-js": "^3.4.10"
+  },
   "author": "Mauro Bieg"
 }
