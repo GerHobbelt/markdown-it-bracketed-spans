@@ -1,5 +1,10 @@
 # markdown-it-bracketed-spans
 
+[![Build Status](https://img.shields.io/travis/GerHobbelt/markdown-it-bracketed-spans/master.svg?style=flat)](https://travis-ci.org/GerHobbelt/markdown-it-bracketed-spans)
+[![NPM version](https://img.shields.io/npm/v/@gerhobbelt/markdown-it-bracketed-spans.svg?style=flat)](https://www.npmjs.org/package/@gerhobbelt/markdown-it-bracketed-spans)
+[![Coverage Status](https://img.shields.io/coveralls/GerHobbelt/markdown-it-bracketed-spans/master.svg?style=flat)](https://coveralls.io/r/GerHobbelt/markdown-it-bracketed-spans?branch=master)
+
+
 Span tag plugin for [markdown-it markdown parser](https://github.com/markdown-it/markdown-it).
 
 Markup is based on [pandoc `bracketed_spans` extension](http://pandoc.org/MANUAL.html#extension-bracketed_spans),
